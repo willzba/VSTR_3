@@ -2,10 +2,12 @@ package com.vstr.integrative.repository;
 
 import com.vstr.integrative.model.VerifyToken;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface VerificationTokenRepository extends JpaRepository<VerifyToken, Long> {
 
-    VerifyToken findByEmailAndToken(String email, String token);
+    VerifyToken findByUserEmailAndToken(String email, String token);
 
-    VerifyToken findByEmail(String email);
+    VerifyToken findByUserEmail(String email);
 }

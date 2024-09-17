@@ -13,7 +13,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String fullName;
+    private String fullname;
 
     @NotBlank(message = "se requiere un email")
     @Email(message = "Formato de email invalido")
@@ -33,27 +33,27 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String fullName, String email, String password, Collection<Role> roles) {
+    public User(Long id, String fullname, String email, String password, Collection<Role> roles) {
         this.id = id;
-        this.fullName = fullName;
+        this.fullname = fullname;
         this.email = email;
         this.password = password;
         this.roles = roles;
     }
 
-    public User(String fullName, String email, String password, Collection<Role> roles) {
-        this.fullName = fullName;
+    public User(String fullname, String email, String password, Collection<Role> roles) {
+        this.fullname = fullname;
         this.email = email;
         this.password = password;
         this.roles = roles;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public @NotBlank(message = "se requiere un email") @Email(message = "Formato de email invalido") String getEmail() {
@@ -87,4 +87,5 @@ public class User {
     public Long getId() {
         return id;
     }
+
 }
